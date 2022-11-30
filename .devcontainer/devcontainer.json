@@ -6,13 +6,16 @@
 		"dockerfile": "Dockerfile"
 	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
+	// If we wanted to, we could lock down the specific versions of tools pulled in,
+	// but given this is just for AoC, lets just use the latest
 	"features": {
 		"ghcr.io/dhoeric/features/act:1": {},
 		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {},
 		"ghcr.io/devcontainers/features/python:1": {},
 		"ghcr.io/devcontainers-contrib/features/poetry:1": {},
-		"ghcr.io/devcontainers-contrib/features/pre-commit:1": {}
+		"ghcr.io/devcontainers-contrib/features/pre-commit:1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:1": {}
 	},
 	"overrideFeatureInstallOrder": [
 		// Install Python first, since there seems to be a conflict with Poetry otherwise
