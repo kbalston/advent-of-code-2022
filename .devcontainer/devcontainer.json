@@ -1,32 +1,32 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-	"name": "C++",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// If we wanted to, we could lock down the specific versions of tools pulled in,
-	// but given this is just for AoC, lets just use the latest
-	"features": {
-		"ghcr.io/dhoeric/features/act:1": {},
-		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {},
-		"ghcr.io/devcontainers/features/python:1": {},
-		"ghcr.io/devcontainers-contrib/features/poetry:1": {},
-		"ghcr.io/devcontainers-contrib/features/pre-commit:1": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:1": {}
-	},
-	"overrideFeatureInstallOrder": [
-		// Install Python first, since there seems to be a conflict with Poetry otherwise
-		"ghcr.io/devcontainers/features/python"
-	],
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pre-commit install",
-	// Configure tool-specific properties.
-	// "customizations": {},
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+  "name": "C++",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // If we wanted to, we could lock down the specific versions of tools pulled in,
+  // but given this is just for AoC, lets just use the latest
+  "features": {
+    "ghcr.io/dhoeric/features/act:1": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers-contrib/features/poetry:1": {},
+    "ghcr.io/devcontainers-contrib/features/pre-commit:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+  },
+  "overrideFeatureInstallOrder": [
+    // Install Python first, since there seems to be a conflict with Poetry otherwise
+    "ghcr.io/devcontainers/features/python"
+  ],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "pre-commit install"
+  // Configure tool-specific properties.
+  // "customizations": {},
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
 }
