@@ -35,9 +35,10 @@ const config = {
           path: 'src/pages'
         },
         docs: {
+          path: 'solutions',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/kbalston/advent-of-code-2022/tree/main/docs/',
+            'https://github.com/kbalston/advent-of-code-2022/tree/main/solutions/',
           routeBasePath: '/',
         },
         theme: {
