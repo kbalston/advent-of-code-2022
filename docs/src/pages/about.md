@@ -19,6 +19,7 @@ including:
 - [Python] 3.10 + [Poetry] 1.2 for Python solutions.
 - [Docusaurus] for documentation hosted on [GitHub Pages].
 - [GitHub Actions] for CI.
+- [Pre-commit] for installing & managing Git hooks.
 
 ## Attribution
 
@@ -38,4 +39,5 @@ This website includes content from [Flaticon]. Thanks so much!
 [github actions]: https://docs.github.com/en/actions
 [github pages]: https://pages.github.com
 [poetry]: https://python-poetry.org
+[pre-commit]: https://pre-commit.com
 [python]: https://www.python.org
