@@ -18,13 +18,17 @@ for line in lines:
     if not line:
         print(f"This elf was seen carrying {thisElf:6} calories")
         maxElf = max(maxElf, thisElf)
-        print(f"The elf seen carrying the most calories so far was carrying {maxElf:6} calories")
+        print(
+            f"The elf seen carrying the most calories so far was carrying {maxElf:6} calories"
+        )
         thisElf = 0
         print()
         continue
     c = int(line)
     thisElf += c
-    print(f"This elf is carrying an item of food of {c:5} calories, for a total of {thisElf:6} calories so far")
+    print(
+        f"This elf is carrying an item of food of {c:5} calories, for a total of {thisElf:6} calories so far"
+    )
 
 print("Done iterating")
 print(f"The elf seen carrying the most calories was carrying {maxElf:6} calories")
