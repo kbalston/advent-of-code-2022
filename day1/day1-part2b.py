@@ -6,11 +6,13 @@ os.chdir(os.path.realpath(os.path.dirname(__file__)))
 with open("day1-input.txt", "r", encoding="utf-8") as inputFile:
     lines = inputFile.read().splitlines()
 
+# @@@SNIPSTART day1-part2b-init
 # Initialize variables used for summation
 numberOfElvesToTrack = 3
 # We'll start with a value of `-1` since
 # that should be smaller than any value any elf can carry
 allElves = [-1] * numberOfElvesToTrack
+# @@@SNIPEND
 thisElf = 0
 
 # Lets make sure we terminate the sequence with
@@ -18,6 +20,7 @@ thisElf = 0
 if lines[-1]:
     lines.append("")
 
+# @@@SNIPSTART day1-part2b-main
 for line in lines:
     if not line:
         print(f"This elf was seen carrying {thisElf:6} calories")
@@ -30,6 +33,7 @@ for line in lines:
         continue
     c = int(line)
     thisElf += c
+# @@@SNIPEND
 
 print("Done iterating")
 print(f"We have collected data on {len(allElves)} elves")

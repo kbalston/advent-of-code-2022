@@ -20,6 +20,7 @@ including:
 - [Docusaurus] for documentation hosted on [GitHub Pages].
 - [GitHub Actions] for CI.
 - [Pre-commit] for installing & managing Git hooks.
+- [Snipsync] for extracting code snippets from solutions and embedding them in markdown.
 
 ## Attribution
 
@@ -41,3 +42,4 @@ This website includes content from [Flaticon]. Thanks so much!
 [poetry]: https://python-poetry.org
 [pre-commit]: https://pre-commit.com
 [python]: https://www.python.org
+[snipsync]: https://github.com/temporalio/snipsync
