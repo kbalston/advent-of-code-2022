@@ -9,11 +9,14 @@ with open("day1-input.txt", "r", encoding="utf-8") as inputFile:
 maxElf = 0
 thisElf = 0
 
+# @@@SNIPSTART day1-part1-input-termination
 # Lets make sure we terminate the sequence with
 # an empty line so we close out that elf's calories
 if lines[-1]:
     lines.append("")
+# @@@SNIPEND
 
+# @@@SNIPSTART day1-part1-main
 for line in lines:
     if not line:
         print(f"This elf was seen carrying {thisElf:6} calories")
@@ -29,6 +32,7 @@ for line in lines:
     print(
         f"This elf is carrying an item of food of {c:5} calories, for a total of {thisElf:6} calories so far"
     )
+# @@@SNIPEND
 
 print("Done iterating")
 print(f"The elf seen carrying the most calories was carrying {maxElf:6} calories")

@@ -58,21 +58,27 @@ seen for each line into `thisElf`. Once an elf's list of food items is terminate
 an empty line, we record the maximum value of calories seen so far into
 `maxElf` and then reset `thisElf` back to zero.
 
-```python
+<!-- prettier-ignore-start -->
+<!--SNIPSTART day1-part1-main-->
+```py
 for line in lines:
     if not line:
         print(f"This elf was seen carrying {thisElf:6} calories")
         maxElf = max(maxElf, thisElf)
-        print(f"The elf seen carrying the most calories so far was carrying {maxElf:6} calories")
+        print(
+            f"The elf seen carrying the most calories so far was carrying {maxElf:6} calories"
+        )
         thisElf = 0
         print()
         continue
     c = int(line)
     thisElf += c
-    print(f"This elf is carrying an item of food of {c:5} calories, for a total of {thisElf:6} calories so far")
-
-print(f"The elf seen carrying the most calories was carrying {maxElf:6} calories")
+    print(
+        f"This elf is carrying an item of food of {c:5} calories, for a total of {thisElf:6} calories so far"
+    )
 ```
+<!--SNIPEND-->
+<!-- prettier-ignore-end -->
 
 One challenge with the solution above is that the last elf will not be fully analyzed
 because that elf does not have an empty line to terminate their list of food items.
@@ -82,12 +88,16 @@ As an example, one way to address this might be to consider recalculating the
 Instead, for simplicity I choose to simply chose to "reconcile" the input data by ensuring that the data
 ended with a newline.
 
-```python
-# Lets make sure we terminate the sequence
-# with an empty line so we close out that elf's calories
+<!-- prettier-ignore-start -->
+<!--SNIPSTART day1-part1-input-termination-->
+```py
+# Lets make sure we terminate the sequence with
+# an empty line so we close out that elf's calories
 if lines[-1]:
     lines.append("")
 ```
+<!--SNIPEND-->
+<!-- prettier-ignore-end -->
 
 For the full solution, please see
 [`day1-part1.py` on GitHub](https://github.com/kbalston/advent-of-code-2022/blob/main/day1/day1-part1.py).
@@ -136,29 +146,41 @@ an unsorted list that contains the number of calories that each elf is carrying.
 
 We can store our calorie count for each elf in a list, `allElves`.
 
-```python
+<!-- prettier-ignore-start -->
+<!--SNIPSTART day1-part2-init-->
+```py
 allElves = []
 ```
+<!--SNIPEND-->
+<!-- prettier-ignore-end -->
 
 And then just append each elf's calorie count, `thisElf`, to `allElves`.
 
-```python
+<!-- prettier-ignore-start -->
+<!--SNIPSTART day1-part2-main-->
+```py
 for line in lines:
     if not line:
-        print("Empty line detected -> end of this elf's food")
+        print(f"This elf was seen carrying {thisElf:6} calories")
         allElves += [thisElf]
         thisElf = 0
         continue
     c = int(line)
     thisElf += c
 ```
+<!--SNIPEND-->
+<!-- prettier-ignore-end -->
 
 Now, we simply need to sort the list and keep the top three entries.
 
-```python
+<!-- prettier-ignore-start -->
+<!--SNIPSTART day1-part2-print-solution-->
+```py
 topThree = sum(sorted(allElves, reverse=True)[0:3])
 print(f"The top three elves are carrying a sum of {topThree:6} calories")
 ```
+<!--SNIPEND-->
+<!-- prettier-ignore-end -->
 
 For the full solution, please see
 [`day1-part2.py` on GitHub](https://github.com/kbalston/advent-of-code-2022/blob/main/day1/day1-part2.py).
@@ -183,24 +205,30 @@ We'll start by initializing `allElves` to `[-1, -1, -1]`.
 We do this so `allElves` is already the correct sized and we can just pop off the `-1` values
 as we learn how much each elf is carrying.
 
-```python
+<!-- prettier-ignore-start -->
+<!--SNIPSTART day1-part2b-init-->
+```py
 # Initialize variables used for summation
 numberOfElvesToTrack = 3
 # We'll start with a value of `-1` since
 # that should be smaller than any value any elf can carry
 allElves = [-1] * numberOfElvesToTrack
 ```
+<!--SNIPEND-->
+<!-- prettier-ignore-end -->
 
 Then, we iterate through `lines` in a similar way to the previous solution,
 except we call `heappushpop(...)` to insert `thisElf` and pop the smallest value.
 
-```python
+<!-- prettier-ignore-start -->
+<!--SNIPSTART day1-part2b-main-->
+```py
 for line in lines:
     if not line:
         print(f"This elf was seen carrying {thisElf:6} calories")
         # We assume that `-1` is smaller than any
         # possible calorie amount
-        assert(thisElf > 0)
+        assert thisElf > 0
         # `heappushpop` will add `thisElf` to `allElves` and pop the smallest value
         heapq.heappushpop(allElves, thisElf)
         thisElf = 0
@@ -208,6 +236,8 @@ for line in lines:
     c = int(line)
     thisElf += c
 ```
+<!--SNIPEND-->
+<!-- prettier-ignore-end -->
 
 For the full solution, please see
 [`day1-part2b.py` on GitHub](https://github.com/kbalston/advent-of-code-2022/blob/main/day1/day1-part2b.py).
