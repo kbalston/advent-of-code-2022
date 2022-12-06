@@ -1,5 +1,5 @@
 # Exclude any file that appears to be input data
-exclude: '^.*/day\w-input\.txt$'
+exclude: '^.*/day.*input.*\.txt$'
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
