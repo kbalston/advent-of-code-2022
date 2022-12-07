@@ -33,6 +33,17 @@ class FilesystemItem:
             sum += child.sumUnderLimit(limit)
         return sum
 
+    def findDelete(self, targetSize):
+        self.calculateSize()
+        best = 100000000000000
+        # Check self
+        if self.totalSize >= targetSize and (self.totalSize < best):
+            best = self.totalSize
+        # Check children recursively
+        for child in self.childrenFolders:
+            best = min(best, child.findDelete(targetSize))
+        return best
+
     # def calculateSizeUnderLimit(self, limit, sumUnderLimit):
     #     self.calculateSize()
     #     for child in self.childrenFolders:
@@ -42,7 +53,7 @@ class FilesystemItem:
     #     return sumUnderLimit
 
 
-def solve(lines, limit=100000, solution=None):
+def solve(lines, limit=100000, solutionPart1=None, solutionPart2=None):
     sum = 0
     currentCommand = None
     currentCommandOption = None
@@ -112,20 +123,40 @@ def solve(lines, limit=100000, solution=None):
             else:
                 assert False
 
-    sum = root.sumUnderLimit(limit)
+    print("\nCalculating solutions...")
+    diskTotal = 70000000
+    diskTargetFree = 30000000
+    root.calculateSize()
+    diskCurrentFree = diskTotal - root.totalSize
+    targetDeletionSize = diskTargetFree - diskCurrentFree
 
-    assert solution is None or solution == sum
-    print(f"Solution is '{sum}'")
-    return sum
+    print("{:>20}: {:>10}".format("diskTotal", diskTotal))
+    print("{:>20}: {:>10}".format("diskTargetFree", diskTargetFree))
+
+    print("{:>20}: {:>10}".format("diskCurrentUsed", root.totalSize))
+    print("{:>20}: {:>10}".format("diskCurrentFree", diskCurrentFree))
+    print("{:>20}: {:>10}".format("targetDeletionSize", targetDeletionSize))
+
+    # assert targetDeletionSize == 8381165
+    # Part 1
+    sum = root.sumUnderLimit(limit)
+    print(f"Part 1: sum of folders under {limit} is {sum}")
+    assert solutionPart1 is None or solutionPart1 == sum
+
+    # Part 2
+    smallestToDelete = root.findDelete(targetSize=targetDeletionSize)
+    print(f"Part 2: size of smallest folder we can delete is {smallestToDelete}")
+    assert solutionPart2 is None or solutionPart2 == smallestToDelete
+    # return sum
 
 
 os.chdir(os.path.realpath(os.path.dirname(__file__)))
 
 with open("day7-input-test.txt", "r", encoding="utf-8") as inputFile:
     lines = inputFile.read().splitlines()
-solve(lines, solution=95437)
-# solve(lines, solution=None)
+solve(lines, solutionPart1=95437, solutionPart2=24933642)
 
 with open("day7-input.txt", "r", encoding="utf-8") as inputFile:
     lines = inputFile.read().splitlines()
-solve(lines, solution=None)
+solve(lines, solutionPart1=None)
+# Part 2 is not 9989903
