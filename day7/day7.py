@@ -102,7 +102,7 @@ def solve(lines, limit=100000, solutionPart1=None, solutionPart2=None) -> None:
             if currentCommand == "cd":
                 assert False, "Should have no output"
             elif currentCommand == "ls":
-                matchOutput = re.match("^(\S+)\s+(\S+)", line)
+                matchOutput = re.match(r"^(\S+)\s+(\S+)", line)
                 size = matchOutput.group(1)
                 if size == "dir":
                     size = 0
