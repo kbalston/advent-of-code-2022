@@ -22,7 +22,7 @@ class FilesystemItem:
             self.totalSize += child.calculateSize()
         return self.totalSize
 
-    def sumUnderLimit(self, limit):
+    def sumUnderLimit(self, limit) -> int:
         sum = 0
         # Add self
         if self.totalSize < limit:

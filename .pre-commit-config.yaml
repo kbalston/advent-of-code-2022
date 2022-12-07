@@ -17,3 +17,10 @@ repos:
     hooks:
       - id: black
         language_version: python3.10
+  - repo: local
+    hooks:
+      - id: day-7-check
+        name: checking day7
+        language: system
+        entry: ./day7/day7.py
+        # files: ^requirements.*.txt$
