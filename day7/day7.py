@@ -158,5 +158,4 @@ solve(lines, solutionPart1=95437, solutionPart2=24933642)
 
 with open("day7-input.txt", "r", encoding="utf-8") as inputFile:
     lines = inputFile.read().splitlines()
-solve(lines, solutionPart1=None)
-# Part 2 is not 9989903
+solve(lines, solutionPart1=1886043, solutionPart2=3842121)
