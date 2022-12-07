@@ -10,7 +10,6 @@ class FilesystemItem:
         self.path = path
         self.size = 0
         self.totalSize = None
-        # self.childrenFiles = []
         self.childrenFolders = []
 
     def __repr__(self) -> str:
@@ -43,14 +42,6 @@ class FilesystemItem:
         for child in self.childrenFolders:
             best = min(best, child.findDelete(targetSize))
         return best
-
-    # def calculateSizeUnderLimit(self, limit, sumUnderLimit):
-    #     self.calculateSize()
-    #     for child in self.childrenFolders:
-    #         sumUnderLimit += child.calculateSizeUnderLimit(limit, sumUnderLimit)
-    #     if self.totalSize < limit:
-    #         return
-    #     return sumUnderLimit
 
 
 def solve(lines, limit=100000, solutionPart1=None, solutionPart2=None):
@@ -137,7 +128,6 @@ def solve(lines, limit=100000, solutionPart1=None, solutionPart2=None):
     print("{:>20}: {:>10}".format("diskCurrentFree", diskCurrentFree))
     print("{:>20}: {:>10}".format("targetDeletionSize", targetDeletionSize))
 
-    # assert targetDeletionSize == 8381165
     # Part 1
     sum = root.sumUnderLimit(limit)
     print(f"Part 1: sum of folders under {limit} is {sum}")
@@ -147,7 +137,6 @@ def solve(lines, limit=100000, solutionPart1=None, solutionPart2=None):
     smallestToDelete = root.findDelete(targetSize=targetDeletionSize)
     print(f"Part 2: size of smallest folder we can delete is {smallestToDelete}")
     assert solutionPart2 is None or solutionPart2 == smallestToDelete
-    # return sum
 
 
 os.chdir(os.path.realpath(os.path.dirname(__file__)))
