@@ -11,14 +11,14 @@ class FilesystemItem:
         self.path = path
         self.size = 0
         self.totalSize = None
-        self.childrenFolders = []
+        self.children = []
 
     def __repr__(self) -> str:
         return f"FilesystemItem{{{self.path.resolve()}, {self.size}}}"
 
     def calculateSize(self) -> int:
         self.totalSize = self.size
-        for child in self.childrenFolders:
+        for child in self.children:
             self.totalSize += child.calculateSize()
         return self.totalSize
 
@@ -28,7 +28,7 @@ class FilesystemItem:
         if self.totalSize < limit:
             sum += self.totalSize
         # Add children recursively
-        for child in self.childrenFolders:
+        for child in self.children:
             sum += child.sumUnderLimit(limit)
         return sum
 
@@ -38,7 +38,7 @@ class FilesystemItem:
         if self.totalSize >= targetSize and (self.totalSize < best):
             best = self.totalSize
         # Check children recursively
-        for child in self.childrenFolders:
+        for child in self.children:
             best = min(best, child.findDelete(targetSize))
         return best
 
@@ -86,7 +86,7 @@ def solve(lines, limit=100000, solutionPart1=None, solutionPart2=None):
                     print(
                         f"{currentWorkingDirectory} is a parent of {nextWorkingDirectory}"
                     )
-                    currentWorkingDirectory.childrenFolders.append(nextWorkingDirectory)
+                    currentWorkingDirectory.children.append(nextWorkingDirectory)
                 currentWorkingDirectory = nextWorkingDirectory
                 del nextWorkingDirectory
                 print(f"=> Changed directory to {currentWorkingDirectory.path}")
