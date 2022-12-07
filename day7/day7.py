@@ -2,7 +2,6 @@
 
 import os
 import re
-from collections import deque
 from pathlib import Path
 import sys
 
@@ -53,7 +52,7 @@ def solve(lines, limit=100000, solutionPart1=None, solutionPart2=None) -> None:
     seen = {root.path: root}
     for line in lines:
         print(f"\nLine: '{line}'")
-        matchCommand = re.match("^\$ (\S+)\s*(\S*)", line)
+        matchCommand = re.match(r"^\$ (\S+)\s*(\S*)", line)
         if matchCommand:
             print(
                 f"=> Detected new command: {matchCommand.groups()} @ {currentWorkingDirectory.path}"
