@@ -24,10 +24,10 @@ def solve(lines, size, solutions=[None]):
 
 os.chdir(os.path.realpath(os.path.dirname(__file__)))
 
-with open("day5-input-test.txt", "r", encoding="utf-8") as inputFile:
+with open("day7-input-test.txt", "r", encoding="utf-8") as inputFile:
     lines = inputFile.read().splitlines()
 solve(lines, size=4, solutions=[7, 5, 6, 10, 11])
 
-with open("day5-input.txt", "r", encoding="utf-8") as inputFile:
+with open("day7-input.txt", "r", encoding="utf-8") as inputFile:
     lines = inputFile.read().splitlines()
 solve(lines, size=4, solutions=[None])
