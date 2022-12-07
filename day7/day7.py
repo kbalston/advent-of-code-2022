@@ -14,7 +14,7 @@ class FilesystemItem:
         self.childrenFolders = []
 
     def __repr__(self) -> str:
-        return f"{self.path.resolve()}#{self.size}"
+        return f"FilesystemItem{{{self.path.resolve()}, {self.size}}}"
 
     def calculateSize(self) -> int:
         self.totalSize = self.size
