@@ -3,6 +3,7 @@ import os
 import re
 from collections import deque
 from pathlib import Path
+import sys
 
 
 class FilesystemItem:
@@ -22,7 +23,6 @@ class FilesystemItem:
         return self.totalSize
 
     def sumUnderLimit(self, limit):
-        self.calculateSize()
         sum = 0
         # Add self
         if self.totalSize < limit:
@@ -33,8 +33,7 @@ class FilesystemItem:
         return sum
 
     def findDelete(self, targetSize):
-        self.calculateSize()
-        best = 100000000000000
+        best = sys.maxsize
         # Check self
         if self.totalSize >= targetSize and (self.totalSize < best):
             best = self.totalSize
