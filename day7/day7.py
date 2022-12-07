@@ -32,7 +32,7 @@ class FilesystemItem:
             sum += child.sumUnderLimit(limit)
         return sum
 
-    def findDelete(self, targetSize):
+    def findDelete(self, targetSize) -> int:
         best = sys.maxsize
         # Check self
         if self.totalSize >= targetSize and (self.totalSize < best):
@@ -43,7 +43,7 @@ class FilesystemItem:
         return best
 
 
-def solve(lines, limit=100000, solutionPart1=None, solutionPart2=None):
+def solve(lines, limit=100000, solutionPart1=None, solutionPart2=None) -> None:
     sum = 0
     currentCommand = None
     currentCommandOption = None
