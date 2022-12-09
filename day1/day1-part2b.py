@@ -40,7 +40,9 @@ print(f"We have collected data on {len(allElves)} elves")
 # Lets make sure we popped off all of those calorie counts
 assert len(allElves) >= numberOfElvesToTrack
 topThree = sum(allElves)
-print(f"The top three elves are carrying a sum of {topThree:6} calories")
+print(
+    f"The top three elves are carrying a sum of {topThree:6} calories"
+)
 
 # Check against the solution we previously submitted
 assert topThree == 209603

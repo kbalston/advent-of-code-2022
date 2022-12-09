@@ -31,7 +31,9 @@ print("Done iterating")
 print(f"We have collected data on {len(allElves)} elves")
 # @@@SNIPSTART day1-part2-print-solution
 topThree = sum(sorted(allElves, reverse=True)[0:3])
-print(f"The top three elves are carrying a sum of {topThree:6} calories")
+print(
+    f"The top three elves are carrying a sum of {topThree:6} calories"
+)
 # @@@SNIPEND
 
 # Check against the solution we previously submitted
