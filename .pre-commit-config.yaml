@@ -1,5 +1,5 @@
 # Exclude any file that appears to be input data
-exclude: '^.*/day.*input.*\.txt$'
+exclude: '^.*/day.*\.txt$'
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
@@ -17,3 +17,12 @@ repos:
     hooks:
       - id: black
         language_version: python3.10
+        args:
+          - --line-length=70
+          - --preview
+  - repo: local
+    hooks:
+      - id: day-2-check
+        name: checking day2
+        language: system
+        entry: ./day2/day2.py

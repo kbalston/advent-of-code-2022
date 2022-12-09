@@ -177,7 +177,9 @@ Now, we simply need to sort the list and keep the top three entries.
 <!--SNIPSTART day1-part2-print-solution-->
 ```py
 topThree = sum(sorted(allElves, reverse=True)[0:3])
-print(f"The top three elves are carrying a sum of {topThree:6} calories")
+print(
+    f"The top three elves are carrying a sum of {topThree:6} calories"
+)
 ```
 <!--SNIPEND-->
 <!-- prettier-ignore-end -->
