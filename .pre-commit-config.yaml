@@ -22,7 +22,19 @@ repos:
           - --preview
   - repo: local
     hooks:
-      - id: day-2-check
+      - id: day1-part1-check
+        name: checking day1-part1
+        language: system
+        entry: ./day1/day1-part1.py
+      - id: day1-part2-check
+        name: checking day1-part2
+        language: system
+        entry: ./day1/day1-part2.py
+      - id: day1-part2b-check
+        name: checking day1-part2b
+        language: system
+        entry: ./day1/day1-part2b.py
+      - id: day2-check
         name: checking day2
         language: system
         entry: ./day2/day2.py
