@@ -38,3 +38,9 @@ repos:
         name: checking day2
         language: system
         entry: ./day2/day2.py
+      - id: day15-check
+        name: checking day15
+        language: system
+        entry: ./day15/day15.py
+        # This one is slow so scope when check is run
+        files: ^day15/.*$
