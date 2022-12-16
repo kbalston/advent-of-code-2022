@@ -2,13 +2,9 @@
 
 from __future__ import annotations
 from collections import defaultdict
-from functools import cmp_to_key
-from itertools import zip_longest
 
 import os
 import re
-from typing import List
-import shelve
 
 
 def distance(sensor, beacon) -> int:
