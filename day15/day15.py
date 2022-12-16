@@ -13,11 +13,8 @@ def distance(sensor, beacon) -> int:
 
 def setPosWithinDist(sensor, dist, grid: SequenceTable):
     for y in range(sensor[1] - dist, sensor[1] + dist + 1):
-        # if y != yOfInterest:
-        #     continue
         distY = abs(y - sensor[1])
         distX = dist - distY
-        # for x in range(sensor[0] - distX, sensor[0] + distX + 1):
         minX = sensor[0] - distX
         maxX = sensor[0] + distX
         grid.set(minX=minX, maxX=maxX, y=y)
@@ -41,7 +38,6 @@ class SequenceTable:
         else:
             return False
 
-    # @profile
     def set(self, minX, maxX, y) -> None:
         if self.clampY:
             if y < self.clampY[0] or y > self.clampY[1]:
