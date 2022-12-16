@@ -28,15 +28,15 @@ class SequenceTable:
         self.clampX = clampX
         self.clampY = clampY
 
-    def get(self, x, y) -> bool:
-        if self.beaconOrSensor.get((x, y), None) is not None:
-            return None
-        seq = self.storage[y]
-        for minX, maxX in seq:
-            if x >= minX and x <= maxX:
-                return True
-        else:
-            return False
+    # def get(self, x, y) -> bool:
+    #     if self.beaconOrSensor.get((x, y), None) is not None:
+    #         return None
+    #     seq = self.storage[y]
+    #     for minX, maxX in seq:
+    #         if x >= minX and x <= maxX:
+    #             return True
+    #     else:
+    #         return False
 
     def set(self, minX, maxX, y) -> None:
         if self.clampY:
