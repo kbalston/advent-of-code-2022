@@ -3,7 +3,7 @@ sidebar_label: "✅ Day 1: Calorie Counting"
 toc_max_heading_level: 5
 ---
 
-# Day 1: Calorie Counting
+# Calorie Counting
 
 ## The Puzzle
 
@@ -66,7 +66,8 @@ for line in lines:
         print(f"This elf was seen carrying {thisElf:6} calories")
         maxElf = max(maxElf, thisElf)
         print(
-            f"The elf seen carrying the most calories so far was carrying {maxElf:6} calories"
+            "The elf seen carrying the most calories so far was"
+            f" carrying {maxElf:6} calories"
         )
         thisElf = 0
         print()
@@ -74,7 +75,8 @@ for line in lines:
     c = int(line)
     thisElf += c
     print(
-        f"This elf is carrying an item of food of {c:5} calories, for a total of {thisElf:6} calories so far"
+        f"This elf is carrying an item of food of {c:5} calories, for"
+        f" a total of {thisElf:6} calories so far"
     )
 ```
 <!--SNIPEND-->

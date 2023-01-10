@@ -38,3 +38,7 @@ repos:
         name: checking day2
         language: system
         entry: ./day2/day2.py
+      - id: day3-check
+        name: checking day3
+        language: system
+        entry: ./day3/day3.py

@@ -3,7 +3,7 @@ sidebar_label: "✅ Day 2: Rock Paper Scissors"
 toc_max_heading_level: 5
 ---
 
-# Day 2: Rock Paper Scissors
+# Rock Paper Scissors
 
 ## The Puzzle: Part 1
 
