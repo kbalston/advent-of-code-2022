@@ -125,7 +125,7 @@ solvePart1(lines, solution=15)
 
 with open("day2-input.txt", "r", encoding="utf-8") as inputFile:
     lines = inputFile.read().splitlines()
-score = solvePart1(lines, solution=14297)
+solvePart1(lines, solution=14297)
 
 # Part 2
 with open("day2-input-test.txt", "r", encoding="utf-8") as inputFile:
@@ -135,4 +135,4 @@ solvePart2(lines, solution=12)
 
 with open("day2-input.txt", "r", encoding="utf-8") as inputFile:
     lines = inputFile.read().splitlines()
-score = solvePart2(lines, solution=10498)
+solvePart2(lines, solution=10498)
