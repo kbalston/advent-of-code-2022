@@ -20,6 +20,11 @@ repos:
         args:
           - --line-length=70
           - --preview
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: "v0.991"
+    hooks:
+      - id: mypy
+        name: checking types with mypy
   - repo: local
     hooks:
       - id: day1-part1-check
