@@ -25,8 +25,29 @@ def grouper(iterable, n, *, incomplete="fill", fillvalue=None):
         # @@@SNIPEND
 
 
-# @@@SNIPSTART day3-getScore
-def getScore(
+# @@@SNIPSTART day3-getScorePart1
+def getScorePart1(ruckA: str, ruckB: str) -> int:
+    """Return the score as an integer of a given elf's rucksack
+    or rucksack compartment by finding the first letter
+    that is present in all provided rucksacks.
+
+    Will assert if no letters are found in common.
+
+    Supports only part 1.
+    """
+    for letter in ruckA:
+        if letter in ruckB:
+            print(f"=> found '{letter}' in all")
+            if letter.islower():
+                return ord(letter) - ord("a") + 1
+            else:
+                return ord(letter) - ord("A") + 27
+    assert False, "Unable to find a common letter"
+    # @@@SNIPEND
+
+
+# @@@SNIPSTART day3-getScorePart2
+def getScorePart2(
     ruckA: str, ruckB: str, ruckC: Optional[str] = None
 ) -> int:
     """Return the score as an integer of a given elf's rucksack
@@ -34,6 +55,8 @@ def getScore(
     that is present in all provided rucksacks.
 
     Will assert if no letters are found in common.
+
+    Supports both part 1 and part 2.
     """
     for letter in ruckA:
         if letter in ruckB and (ruckC is None or letter in ruckC):
@@ -67,7 +90,9 @@ def solvePart1(lines: list[str], expected: int) -> None:
         print(firstCompartment)
         print(secondCompartment)
         # Find the first shared letter in the compartments
-        calculated += getScore(firstCompartment, secondCompartment)
+        calculated += getScorePart1(
+            firstCompartment, secondCompartment
+        )
     checkSolution(calculated=calculated, expected=expected)
     # @@@SNIPEND
 
@@ -84,7 +109,7 @@ def solvePart2(lines: list[str], expected: int) -> None:
         for elf in elves:
             print(elf)
         # Find the first shared letter in the compartments
-        calculated += getScore(*elves)
+        calculated += getScorePart2(*elves)
     checkSolution(calculated=calculated, expected=expected)
     # @@@SNIPEND
 
