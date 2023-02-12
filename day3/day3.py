@@ -4,6 +4,7 @@ import os
 from itertools import zip_longest
 from typing import Optional
 
+
 # @@@SNIPSTART day3-grouper
 # From https://docs.python.org/3/library/itertools.html
 # License: Zero Clause BSD License
