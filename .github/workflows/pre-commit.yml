@@ -27,7 +27,7 @@ jobs:
           imageName: ghcr.io/kbalston/advent-of-code-2022-devcontainer
           cacheFrom: ghcr.io/kbalston/advent-of-code-2022-devcontainer
           push: always
-      - name: Build docs
+      - name: Run pre-commit
         uses: devcontainers/ci@96af31b963e2ff6b5be0f96195a92f0c844c52b4
         with:
           push: never
