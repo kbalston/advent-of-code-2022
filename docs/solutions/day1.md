@@ -5,6 +5,13 @@ toc_max_heading_level: 5
 
 # Calorie Counting
 
+:::info Full solution
+
+The full solution for this day's puzzle can be found on
+[GitHub](https://github.com/kbalston/advent-of-code-2022/tree/main/day1).
+
+:::
+
 ## The Puzzle
 
 The [full puzzle text](https://adventofcode.com/2022/day/1) is available,
