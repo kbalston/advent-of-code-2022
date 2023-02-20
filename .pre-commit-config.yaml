@@ -51,3 +51,7 @@ repos:
         name: checking day4
         language: system
         entry: ./day4/day4.py
+      - id: day5-check
+        name: checking day5
+        language: system
+        entry: ./day5/day5.py

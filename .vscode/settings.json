@@ -1,11 +1,17 @@
 {
   "terminal.integrated.scrollback": 10000,
-  "cSpell.words": [
+  "cSpell.ignoreWords": [
+    "appendleft",
     "elfpair",
     "hasoverlap",
     "isdisjoint",
     "issubset",
+    "mypy",
+    "popleft",
     "SNIPEND",
-    "SNIPSTART"
-  ]
+    "SNIPSTART",
+    "SPFMVDTZT",
+    "ZFSJBPRFP"
+  ],
+  "cSpell.words": ["dedenting", "deque", "deques"]
 }
