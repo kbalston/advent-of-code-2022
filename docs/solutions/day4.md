@@ -8,12 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Camp Cleanup
 
-:::info Full solution
-
-The full solution for this day's puzzle can be found on
-[GitHub](https://github.com/kbalston/advent-of-code-2022/tree/main/day4).
-
-:::
+<CalloutSolution day="4"/>
 
 ## Part 1
 

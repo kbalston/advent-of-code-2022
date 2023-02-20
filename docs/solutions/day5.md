@@ -8,12 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Supply Stacks
 
-:::info Full solution
-
-The full solution for this day's puzzle can be found on
-[GitHub](https://github.com/kbalston/advent-of-code-2022/tree/main/day5).
-
-:::
+<CalloutSolution day="5"/>
 
 ## Puzzle
 

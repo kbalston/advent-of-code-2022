@@ -5,12 +5,7 @@ toc_max_heading_level: 5
 
 # Rock Paper Scissors
 
-:::info Full solution
-
-The full solution for this day's puzzle can be found on
-[GitHub](https://github.com/kbalston/advent-of-code-2022/tree/main/day2).
-
-:::
+<CalloutSolution day="2"/>
 
 ## The Puzzle: Part 1
 

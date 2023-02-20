@@ -5,12 +5,7 @@ toc_max_heading_level: 5
 
 # Rucksack Reorganization
 
-:::info Full solution
-
-The full solution for this day's puzzle can be found on
-[GitHub](https://github.com/kbalston/advent-of-code-2022/tree/main/day3).
-
-:::
+<CalloutSolution day="3"/>
 
 ## Part 1
 
