@@ -1,11 +1,12 @@
 ---
-sidebar_label: "✅ Day 2: Rock Paper Scissors"
+sidebar_label: "✅📘 Day 2: Rock Paper Scissors"
 toc_max_heading_level: 5
 ---
 
 # Rock Paper Scissors
 
 <CalloutSolution day="2"/>
+<CalloutWriteup/>
 
 ## The Puzzle: Part 1
 

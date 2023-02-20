@@ -1,11 +1,12 @@
 ---
-sidebar_label: "✅ Day 3: Rucksack Reorganization"
+sidebar_label: "✅📘 Day 3: Rucksack Reorganization"
 toc_max_heading_level: 5
 ---
 
 # Rucksack Reorganization
 
 <CalloutSolution day="3"/>
+<CalloutWriteup/>
 
 ## Part 1
 

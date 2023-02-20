@@ -1,11 +1,12 @@
 ---
-sidebar_label: "✅ Day 1: Calorie Counting"
+sidebar_label: "✅📘 Day 1: Calorie Counting"
 toc_max_heading_level: 5
 ---
 
 # Calorie Counting
 
 <CalloutSolution day="1"/>
+<CalloutWriteup/>
 
 ## The Puzzle
 
