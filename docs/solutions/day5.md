@@ -1,5 +1,5 @@
 ---
-sidebar_label: "✅ Day 5: Supply Stacks"
+sidebar_label: "✅📘 Day 5: Supply Stacks"
 toc_max_heading_level: 5
 ---
 
@@ -9,6 +9,7 @@ import TabItem from '@theme/TabItem';
 # Supply Stacks
 
 <CalloutSolution day="5"/>
+<CalloutWriteup/>
 
 ## Puzzle
 

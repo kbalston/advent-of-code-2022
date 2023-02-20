@@ -1,5 +1,5 @@
 ---
-sidebar_label: "✅ Day 4: Camp Cleanup"
+sidebar_label: "✅📘 Day 4: Camp Cleanup"
 toc_max_heading_level: 5
 ---
 
@@ -9,6 +9,7 @@ import TabItem from '@theme/TabItem';
 # Camp Cleanup
 
 <CalloutSolution day="4"/>
+<CalloutWriteup/>
 
 ## Part 1
 
