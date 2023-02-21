@@ -13,7 +13,7 @@ class MoveType(IntEnum):
 
     # @@@SNIPSTART day2-MoveTypeDecode
     @classmethod
-    def from_str(cls, rawMove) -> MoveType:
+    def from_str(cls, rawMove: str) -> MoveType:
         # We convert these input characters to their ordinal
         # values and then calculate their 'distance' from the base
         # For example, 'B' has a distance of 1 from 'A'
@@ -84,7 +84,7 @@ class MoveType(IntEnum):
 
 
 # @@@SNIPSTART day2-solvePart1
-def solvePart1(lines, solution: int) -> None:
+def solvePart1(lines: list[str], solution: int) -> None:
     score = 0
     for line in lines:
         # Get the moves from the puzzle input
@@ -101,7 +101,7 @@ def solvePart1(lines, solution: int) -> None:
 
 
 # @@@SNIPSTART day2-solvePart2
-def solvePart2(lines, solution: int) -> None:
+def solvePart2(lines: list[str], solution: int) -> None:
     score = 0
     for line in lines:
         theirMoveStr, desiredOutcome = line.split()

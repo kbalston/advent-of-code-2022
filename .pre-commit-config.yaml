@@ -25,7 +25,8 @@ repos:
     hooks:
       - id: mypy
         name: checking types with mypy
-        # args: [--strict]
+        args:
+          - --strict
   - repo: local
     hooks:
       - id: day1-part1-check

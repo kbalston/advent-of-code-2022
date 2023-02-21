@@ -2,12 +2,13 @@
 import os
 
 from itertools import zip_longest
-from typing import Optional
+from typing import Optional, no_type_check
 
 
 # @@@SNIPSTART day3-grouper
 # From https://docs.python.org/3/library/itertools.html
 # License: Zero Clause BSD License
+@no_type_check
 def grouper(iterable, n, *, incomplete="fill", fillvalue=None):
     "Collect data into non-overlapping fixed-length chunks or blocks"
     # grouper('ABCDEFG', 3, fillvalue='x') --> ABC DEF Gxx
