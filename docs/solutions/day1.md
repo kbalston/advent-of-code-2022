@@ -1,5 +1,6 @@
 ---
 sidebar_label: "✅📘 Day 1: Calorie Counting"
+sidebar_position: 1
 toc_max_heading_level: 5
 ---
 

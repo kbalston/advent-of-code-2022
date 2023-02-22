@@ -1,5 +1,6 @@
 ---
 sidebar_label: "✅📘 Day 2: Rock Paper Scissors"
+sidebar_position: 2
 toc_max_heading_level: 5
 ---
 
