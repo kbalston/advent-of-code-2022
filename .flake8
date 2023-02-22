@@ -1,0 +1,4 @@
+[flake8]
+# We let the `black` formatter handle our formatting,
+# so we ignore some of those warnings and errors
+ignore = E131,E203,E272,E501,W503

@@ -20,8 +20,8 @@ def parseCratePositions(
         # column numbers like " 1   2   3"
         if "1" in line:
             print(
-                f"=> Detected a '1' in the line"
-                f" => Assuming end of crate list"
+                "=> Detected a '1' in the line"
+                " => Assuming end of crate list"
             )
             # Also pop the next line, which should be empty
             nextLine = lines.pop(0)
