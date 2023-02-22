@@ -1,5 +1,6 @@
 ---
 sidebar_label: "✅📘 Day 3: Rucksack Reorganization"
+sidebar_position: 3
 toc_max_heading_level: 5
 ---
 

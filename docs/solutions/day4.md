@@ -1,5 +1,6 @@
 ---
 sidebar_label: "✅📘 Day 4: Camp Cleanup"
+sidebar_position: 4
 toc_max_heading_level: 5
 ---
 

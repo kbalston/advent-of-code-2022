@@ -1,5 +1,6 @@
 ---
 sidebar_label: "✅ Day 11: Monkey in the Middle"
+sidebar_position: 11
 toc_max_heading_level: 5
 ---
 

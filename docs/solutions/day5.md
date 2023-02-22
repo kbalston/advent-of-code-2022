@@ -1,5 +1,6 @@
 ---
 sidebar_label: "✅📘 Day 5: Supply Stacks"
+sidebar_position: 5
 toc_max_heading_level: 5
 ---
 
