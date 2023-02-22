@@ -27,6 +27,10 @@ repos:
         name: checking types with mypy
         args:
           - --strict
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
   - repo: local
     hooks:
       - id: day1-part1-check
