@@ -37,55 +37,69 @@ repos:
         name: checking day1-part1
         language: system
         entry: ./day1/day1-part1.py
+        files: ^day1/.*$
       - id: day1-part2-check
         name: checking day1-part2
         language: system
         entry: ./day1/day1-part2.py
+        files: ^day1/.*$
       - id: day1-part2b-check
         name: checking day1-part2b
         language: system
         entry: ./day1/day1-part2b.py
+        files: ^day1/.*$
       - id: day2-check
         name: checking day2
         language: system
         entry: ./day2/day2.py
+        files: ^day2/.*$
       - id: day3-check
         name: checking day3
         language: system
         entry: ./day3/day3.py
+        files: ^day3/.*$
       - id: day4-check
         name: checking day4
         language: system
         entry: ./day4/day4.py
+        files: ^day4/.*$
       - id: day5-check
         name: checking day5
         language: system
         entry: ./day5/day5.py
+        files: ^day5/.*$
       - id: day6-check
         name: checking day6
         language: system
         entry: ./day6/day6.py
+        files: ^day6/.*$
       - id: day7-check
         name: checking day7
         language: system
         entry: ./day7/day7.py
+        files: ^day7/.*$
       - id: day8-check
         name: checking day8
         language: system
         entry: ./day8/day8.py
+        files: ^day8/.*$
       - id: day9-check
         name: checking day9
         language: system
         entry: ./day9/day9.py
+        files: ^day9/.*$
       - id: day10-check
         name: checking day10
         language: system
         entry: ./day10/day10.py
+        files: ^day10/.*$
       - id: day11-check
         name: checking day11
         language: system
         entry: ./day11/day11.py
+        files: ^day11/.*$
       - id: day-12-check
         name: checking day12
         language: system
         entry: ./day12/day12.py
+        files: ^day12/.*$
