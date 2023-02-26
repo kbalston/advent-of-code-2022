@@ -2,6 +2,9 @@
 
 set -eux
 
+SCRIPT_DIR="$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+cd "$SCRIPT_DIR"
+
 pre-commit install
 
 # Install git-delete-merged-branches
@@ -10,3 +13,5 @@ pre-commit install
 # but unfortunately we're currently relying on the Python devcontainer feature
 # which is executed after image build
 pipx install git-delete-merged-branches==7.2.2
+
+pip install --requirement requirements.txt
