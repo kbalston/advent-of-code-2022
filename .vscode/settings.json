@@ -1,6 +1,7 @@
 {
   "terminal.integrated.scrollback": 10000,
   "cSpell.ignoreWords": [
+    "addx",
     "appendleft",
     "elfpair",
     "hasoverlap",
@@ -13,5 +14,16 @@
     "SPFMVDTZT",
     "ZFSJBPRFP"
   ],
-  "cSpell.words": ["astar", "callout", "dedenting", "deque", "deques", "evaled"]
+  "cSpell.words": [
+    "astar",
+    "callout",
+    "dedenting",
+    "deque",
+    "deques",
+    "evaled"
+  ],
+  "python.testing.pytestArgs": ["day20"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "testing.automaticallyOpenPeekView": "never"
 }
