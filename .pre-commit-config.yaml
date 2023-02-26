@@ -143,3 +143,8 @@ repos:
         language: system
         entry: pytest ./day20
         files: ^day20/.*$
+      - id: day21-check
+        name: checking day21
+        language: system
+        entry: ./day21/day21.py
+        files: ^day21/.*$
