@@ -118,3 +118,8 @@ repos:
         language: system
         entry: ./day15/day15.py
         files: ^day15/.*$
+      - id: day16-check
+        name: checking day16
+        language: system
+        entry: ./day16/day16.py
+        files: ^day16/.*$
