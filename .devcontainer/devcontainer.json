@@ -12,7 +12,10 @@
     "ghcr.io/dhoeric/features/act:1": {},
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11",
+      "optimize": true
+    },
     "ghcr.io/devcontainers-contrib/features/poetry:1": {},
     "ghcr.io/devcontainers-contrib/features/pre-commit:1": {},
     "ghcr.io/devcontainers/features/docker-in-docker:1": {}
