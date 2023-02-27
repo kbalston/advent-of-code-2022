@@ -15,8 +15,7 @@ The planned tool stack is an Ubuntu 22.04
 [devcontainer]-based development environment
 including:
 
-- [Clang] 14 + [CMake] 3.25 for C++ solutions.
-- [Python] 3.10 + [Poetry] 1.2 for Python solutions.
+- [Python] 3.11 + [Poetry] 1.2 for Python solutions.
 - [Docusaurus] for documentation hosted on [GitHub Pages].
 - [GitHub Actions] for CI.
 - [Pre-commit] for installing & managing Git hooks.
