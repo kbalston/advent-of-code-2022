@@ -4,15 +4,12 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Solutions in C++ & Python",
+    title: "Solutions in Python",
     // Requires attribution:
     // https://www.flaticon.com/free-icon/planing_4248398?related_id=4248398
     imageSrc: require("@site/static/img/planing.png").default,
     description: (
-      <>
-        The exact mix is still up in the air, but I'm planning on solving Advent
-        of Code this year with a combination of C++ & Python.
-      </>
+      <>I'm planning on solving Advent of Code this year primarily in Python.</>
     ),
   },
   {
